@@ -1,0 +1,15 @@
+<%= simple_form_for(@member) do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
+  <%= f.input :fees_paid %>
+  <%= f.input :campus_resident %>
+  <%= f.input :volunteer %>
+  <%= f.input :referrer %>
+  <%= f.input :recruiter_id %>
+  <%= f.input :interests %>
+  <%= f.input :position_id %>
+
+  <%= f.button :submit %>
+<% end %>
