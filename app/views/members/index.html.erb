@@ -1,4 +1,4 @@
-<h1>Armstrong ACM Members</h1>
+<h1>Current Members</h1>
 
 <table>
   <thead>
@@ -6,8 +6,9 @@
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Current?</th>
-      <th>Volunteer?</th>
+      <th>Current</th>
+      <th>Volunteer</th>
+      <th>Recruiter</th>
       <th>Position</th>
       <th></th>
       <th></th>
@@ -21,8 +22,9 @@
         <td><%= member.name %></td>
         <td><%= member.email %></td>
         <td><%= member.phone %></td>
-        <td><%= member.fees_paid %></td>
-        <td><%= member.volunteer %></td>
+        <td><%= make_check(member.fees_paid) %></td>
+        <td><%= make_check(member.volunteer) %></td>
+        <td><%= show_name(member.recruiter) %></td>
         <td><%= member.position_id %></td>
         <td><%= link_to 'Show', member %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>

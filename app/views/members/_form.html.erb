@@ -1,15 +1,114 @@
 <%= simple_form_for(@member) do |f| %>
 
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :phone %>
-  <%= f.input :fees_paid %>
-  <%= f.input :campus_resident %>
-  <%= f.input :volunteer %>
-  <%= f.input :referrer %>
-  <%= f.input :recruiter_id %>
-  <%= f.input :interests %>
-  <%= f.input :position_id %>
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="name" class="right inline">Name</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :name, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="email" class="right inline">Email</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :email, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="phone" class="right inline">Phone</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :phone, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="fees_paid" class="right">Fees Paid?</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :fees_paid, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="campus_resident" class="right">Campus Resident?</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :campus_resident, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="volunteer" class="right">Volunteer?</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :volunteer, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="referrer" class="right inline">Referrer</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :referrer, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="recruiter" class="right inline">Recruiter</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.association :recruiter, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="interests" class="right inline">Interests</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :interests, label: false %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8">
+      <div class="small-3 columns">
+        <label for="position" class="right inline">Position</label>
+      </div>
+      <div class="small-9 columns">
+        <%= f.input :position_id, label: false %>
+      </div>
+    </div>
+  </div>
 
   <%= f.button :submit %>
 <% end %>
