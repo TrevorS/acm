@@ -1,5 +1,6 @@
 <%= simple_form_for(@member) do |f| %>
 
+<div class="small-offset-2 columns">
   <div class="row">
     <div class="small-8">
       <div class="small-3 columns">
@@ -36,7 +37,7 @@
   <div class="row">
     <div class="small-8">
       <div class="small-3 columns">
-        <label for="fees_paid" class="right">Fees Paid?</label>
+        <label for="fees_paid" class="right">Paid?</label>
       </div>
       <div class="small-9 columns">
         <%= f.input :fees_paid, label: false %>
@@ -47,7 +48,7 @@
   <div class="row">
     <div class="small-8">
       <div class="small-3 columns">
-        <label for="campus_resident" class="right">Campus Resident?</label>
+        <label for="campus_resident" class="right">Resident?</label>
       </div>
       <div class="small-9 columns">
         <%= f.input :campus_resident, label: false %>
@@ -110,5 +111,13 @@
     </div>
   </div>
 
-  <%= f.button :submit %>
+  <div class="row">
+    <div class="small-8">
+      <div class="small-offset-3 columns">
+        <%= f.button :submit, class: 'button radius' %>
+        <%= link_to 'Back', members_path, class: 'button radius secondary' %>
+      </div>
+    </div>
+  </div>
+</div>
 <% end %>

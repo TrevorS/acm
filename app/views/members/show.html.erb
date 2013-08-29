@@ -1,59 +1,67 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-offset-4 columns">
 
-<p>
-  <strong>Name:</strong>
-  <%= @member.name %>
-</p>
+    <table>
+      <tbody>
+        <tr>
+          <th class="right">Name:</th>
+          <td><%= @member.name %></td>
+        </tr>
 
-<p>
-  <strong>Email:</strong>
-  <%= @member.email %>
-</p>
+        <tr>
+          <th class="right">Email:</th>
+          <td><%= @member.email %></td>
+        </tr>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @member.phone %>
-</p>
+        <tr>
+          <th class="right">Phone:</th>
+          <td><%= @member.phone %></td>
+        </tr>
 
-<p>
-  <strong>Major:</strong>
-  <%= @member.major %>
-</p>
+        <tr>
+          <th class="right">Major:</th>
+          <td><%= @member.major %></td>
+        </tr>
 
-<p>
-  <strong>Fees paid:</strong>
-  <%= @member.fees_paid %>
-</p>
+        <tr>
+          <th class="right">Fees paid:</th>
+          <td><%= @member.fees_paid %></td>
+        </tr>
 
-<p>
-  <strong>Campus resident:</strong>
-  <%= @member.campus_resident %>
-</p>
+        <tr>
+          <th class="right">Campus resident:</th>
+          <td><%= @member.campus_resident %></td>
+        </tr>
 
-<p>
-  <strong>Volunteer:</strong>
-  <%= @member.volunteer %>
-</p>
+        <tr>
+          <th class="right">Volunteer:</th>
+          <td><%= @member.volunteer %></td>
+        </tr>
 
-<p>
-  <strong>Referrer:</strong>
-  <%= @member.referrer %>
-</p>
+        <tr>
+          <th class="right">Referrer:</th>
+          <td><%= @member.referrer %></td>
+        </tr>
 
-<p>
-  <strong>Recruiter:</strong>
-  <%= @member.recruiter_id %>
-</p>
+        <tr>
+          <th class="right">Recruiter:</th>
+          <td><%= show_name(@member.recruiter) %></td>
+        </tr>
 
-<p>
-  <strong>Interests:</strong>
-  <%= @member.interests %>
-</p>
+        <tr>
+          <th class="right">Interests:</th>
+          <td><%= @member.interests %></td>
+        </tr>
 
-<p>
-  <strong>Position:</strong>
-  <%= @member.position_id %>
-</p>
+        <tr>
+          <th class="right">Position:</th>
+          <td><%= show_position(@member.position) %></td>
+        </tr>
+      </tbody>
+    </table>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+    <%= link_to 'Edit', edit_member_path(@member), class: 'button radius' %>
+    <%= link_to 'Back', members_path, class: 'button radius secondary' %>
+
+  </div>
+</div>
