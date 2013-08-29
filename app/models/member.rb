@@ -22,4 +22,6 @@ class Member < ActiveRecord::Base
 
   belongs_to :recruiter, class_name: 'Member'
   has_many :recruits, class_name: 'Member', foreign_key: 'recruiter_id'
+
+  belongs_to :position
 end

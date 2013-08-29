@@ -15,4 +15,12 @@ module MembersHelper
       recruiter.name
     end
   end
+
+  def show_position(position)
+    if position.nil?
+      ''
+    else
+      position.name
+    end
+  end
 end
