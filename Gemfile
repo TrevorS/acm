@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,14 +32,30 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# better errors for better errors
+gem 'better_errors', group: [:development, :test]
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# simple form makes forms way easier
+gem 'simple_form'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+# zurb foundation
+gem 'compass-rails'
+gem 'zurb-foundation'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+# haml!
+gem 'haml'
+
+# icons
+gem 'font-awesome-sass-rails'
+
+# pagination
+gem 'will_paginate'
+
+# users
+gem 'devise'
+
+# help me
+gem 'introjs-rails'
+
+# gives information about database columns in each model
+gem 'annotate'
